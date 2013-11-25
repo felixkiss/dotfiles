@@ -1,3 +1,6 @@
+# Set LANG
+export LANG="en_US.UTF-8"
+
 # Use oh-my-zsh if installed
 [[ -d ~/.oh-my-zsh ]] && source ~/.zshrc.oh-my-zsh
 
