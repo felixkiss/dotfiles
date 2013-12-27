@@ -1,0 +1,31 @@
+[user]
+  name = Felix Kiss
+  email = felix@felixkiss.com
+[push]
+  default = simple
+[color]
+  ui = true
+[core]
+  editor = text -w
+[alias]
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[diff]
+  tool = Kaleidoscope
+[difftool]
+  prompt = false
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[merge]
+  tool = Kaleidoscope
+[mergetool]
+  prompt = false
