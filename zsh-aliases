@@ -1,2 +1,6 @@
+# Git aliases
 alias gs='git status'
+alias gl='git log'
+
+# Laravel aliases
 alias art='php artisan'
