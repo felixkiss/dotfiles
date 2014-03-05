@@ -1,4 +1,5 @@
 bin
+phpspec
 vagrant-provisioning
 zsh
 gitconfig
