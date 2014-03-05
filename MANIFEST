@@ -1,6 +1,5 @@
 bin
+zsh
 gitconfig
 gitignore_global
-zsh-aliases
 zshrc
-zshrc.oh-my-zsh
