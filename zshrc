@@ -10,8 +10,11 @@ source ~/.zsh/aliases.sh
 # Set base PATH
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-# Add ~/.bin to PATH
-export PATH=$HOME/.bin:$PATH
+# Load platform specific settings
+source ~/.zsh/platform.sh
+
+# Add ~/.bin/base to PATH
+export PATH=$HOME/.bin/base:$PATH
 
 # Load rbenv if installed
 [[ -d ~/.rbenv ]] && eval "$(rbenv init -)"
