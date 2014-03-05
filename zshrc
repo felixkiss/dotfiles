@@ -13,5 +13,5 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # Add ~/.bin to PATH
 export PATH=$HOME/.bin:$PATH
 
-# Add rbenv to PATH
-eval "$(rbenv init -)"
+# Load rbenv if installed
+[[ -d ~/.rbenv ]] && eval "$(rbenv init -)"
