@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# start or stop
+mode=$1
+
+case "$mode" in
+	'start')
+		launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+		echo "php-fpm started"
+		;;
+
+	'stop')
+		launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+		echo "php-fpm stopped"
+		;;
+
+	'restart')
+		launchctl unload -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+		echo "php-fpm stopped"
+
+		launchctl load -w ~/Library/LaunchAgents/homebrew-php.josegonzalez.php54.plist
+		echo "php-fpm started"
+		;;
+esac

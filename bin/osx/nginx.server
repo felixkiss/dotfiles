@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# start or stop
+mode=$1
+
+case "$mode" in
+	'start')
+		sudo launchctl load -w /Library/LaunchAgents/homebrew.mxcl.nginx.plist
+		echo "nginx started"
+		;;
+
+	'stop')
+		sudo launchctl unload -w /Library/LaunchAgents/homebrew.mxcl.nginx.plist
+		echo "nginx stopped"
+		;;
+
+	'restart')
+		sudo launchctl unload -w /Library/LaunchAgents/homebrew.mxcl.nginx.plist
+		echo "nginx stopped"
+
+		sudo launchctl load -w /Library/LaunchAgents/homebrew.mxcl.nginx.plist
+		echo "nginx started"
+		;;
+esac
