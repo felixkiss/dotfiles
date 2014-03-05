@@ -1,0 +1,25 @@
+# editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# PHP
+[*.blade.php]
+indent_size = 2
+
+[*.php]
+indent_size = 4
+
+# JSON
+[*.json]
+indent_size = 4
+
+# CSS
+[{*.css,*.sass,*.scss,*.less}]
+indent_size = 4

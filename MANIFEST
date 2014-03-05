@@ -3,6 +3,7 @@ bin
 phpspec
 vagrant-provisioning
 zsh
+editorconfig
 gitconfig
 gitignore_global
 zshrc
