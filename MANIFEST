@@ -1,4 +1,5 @@
 bin
+vagrant-provisioning
 zsh
 gitconfig
 gitignore_global
