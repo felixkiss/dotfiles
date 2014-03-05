@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/Applications/GitHub.app/Contents/MacOS/github_cli $*
