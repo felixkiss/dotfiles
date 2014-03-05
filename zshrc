@@ -16,5 +16,8 @@ source ~/.zsh/platform.sh
 # Add ~/.bin/base to PATH
 export PATH=$HOME/.bin/base:$PATH
 
+# Add ./vendor/bin to PATH (for Composer projects)
+export PATH=./vendor/bin:$PATH
+
 # Load rbenv if installed
 [[ -d ~/.rbenv ]] && eval "$(rbenv init -)"
