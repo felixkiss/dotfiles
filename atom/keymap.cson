@@ -1,0 +1,9 @@
+# I am on a MacBook Pro with German keyboard layout
+# and have trouble assigning some keybindings
+#
+'body':
+  'cmd-"': 'pane:show-next-item'
+  # 'cmd-shift-2': 'pane:show-next-item'
+
+  'cmd-!': 'pane:show-previous-item'
+  # 'cmd-shift-1': 'pane:show-previous-item'

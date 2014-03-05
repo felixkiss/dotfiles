@@ -1,0 +1,4 @@
+atom/.node-gyp/
+atom/storage/
+atom/dev/
+atom/packages/

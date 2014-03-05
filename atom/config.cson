@@ -1,0 +1,76 @@
+'exception-reporting':
+  'userId': 'ac87803e-55eb-c8aa-62b0-44ab537d7fea'
+'release-notes':
+  'viewedVersion': '0.67.0'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '7a4e048aa0bd763d5479ed6f8ab642714780a0d3'
+'core':
+  'themes': [
+    'atom-dark-ui'
+    'monokai'
+  ]
+  'ignoredNames': [
+    '.git'
+    '.svn'
+    '.DS_Store'
+    '.vagrant'
+    '.sass-cache'
+  ]
+  'projectHome': '/Users/felix/code'
+  'disabledPackages': [
+    'archive-view'
+    'autosave'
+    'bracket-matcher'
+    'feedback'
+  ]
+'feedback':
+  'email': 'felix@felixkiss.com'
+'tree-view':
+  'hideIgnoredNames': true
+'spell-check':
+  'grammars': [
+    'source.gfm'
+    'text.git-commit'
+    'text.plain'
+  ]
+'alignment':
+  'leftSeparators': [
+    ':'
+  ]
+  'rightSeparators': [
+    '='
+    '+='
+    '-='
+    '*='
+    '/='
+    '?='
+    '|='
+    '%='
+    '.='
+  ]
+  'spaceSeparators': [
+    '='
+    '+='
+    '-='
+    '*='
+    '/='
+    '?='
+    '|='
+    '%='
+    '.='
+  ]
+'editor':
+  'fontSize': 23
+  'fontFamily': 'Source Code Pro'
+  'showInvisibles': true
+  'invisibles':
+    'cr': '↩'
+  'showIndentGuide': true
+'grammar-config':
+  'PHP':
+    'editor':
+      'tabLength': 4
+'whitespace':
+  'ignoreWhitespaceOnCurrentLine': false

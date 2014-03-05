@@ -1,0 +1,36 @@
+.editor {
+  // Let the code breath!
+  .line, .cursor, .line-number {
+    padding: 7px 0;
+  }
+
+  // Show invisible characters upon selection
+  .line .invisible-character {
+    color: rgba(40, 40, 40, 1);
+  }
+
+  // Cursor isn't blinking anymore
+  &.is-focused .cursor.blink-off {
+    visibility: visible;
+  }
+
+  // Git Diff
+  .gutter {
+    .line-number {
+      &.git-line-added, &.git-line-removed, &.git-line-modified {
+        border-left-width: 3px;
+      }
+
+      &.git-line-added {
+        border-left-color: #98e03a;
+      }
+    }
+  }
+}
+
+// Border between split panes
+.panes {
+    .pane-row > * {
+        border-right: 2px solid rgba(72, 72, 72, 0.5);
+    }
+}
