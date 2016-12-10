@@ -1,76 +1,115 @@
-'exception-reporting':
-  'userId': 'ac87803e-55eb-c8aa-62b0-44ab537d7fea'
-'release-notes':
-  'viewedVersion': '0.67.0'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': '7a4e048aa0bd763d5479ed6f8ab642714780a0d3'
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'monokai'
-  ]
-  'ignoredNames': [
-    '.git'
-    '.svn'
-    '.DS_Store'
-    '.vagrant'
-    '.sass-cache'
-  ]
-  'projectHome': '/Users/felix/code'
-  'disabledPackages': [
-    'archive-view'
-    'autosave'
-    'bracket-matcher'
-    'feedback'
-  ]
-'feedback':
-  'email': 'felix@felixkiss.com'
-'tree-view':
-  'hideIgnoredNames': true
-'spell-check':
-  'grammars': [
-    'source.gfm'
-    'text.git-commit'
-    'text.plain'
-  ]
-'alignment':
-  'leftSeparators': [
-    ':'
-  ]
-  'rightSeparators': [
-    '='
-    '+='
-    '-='
-    '*='
-    '/='
-    '?='
-    '|='
-    '%='
-    '.='
-  ]
-  'spaceSeparators': [
-    '='
-    '+='
-    '-='
-    '*='
-    '/='
-    '?='
-    '|='
-    '%='
-    '.='
-  ]
-'editor':
-  'fontSize': 23
-  'fontFamily': 'Source Code Pro'
-  'showInvisibles': true
-  'invisibles':
-    'cr': '↩'
-  'showIndentGuide': true
-'grammar-config':
-  'PHP':
-    'editor':
-      'tabLength': 4
-'whitespace':
-  'ignoreWhitespaceOnCurrentLine': false
+"*":
+  alignment:
+    rightSeparators: [
+      "="
+      "+="
+      "-="
+      "*="
+      "/="
+      "?="
+      "|="
+      "%="
+      ".="
+    ]
+    spaceSeparators: [
+      "="
+      "+="
+      "-="
+      "*="
+      "/="
+      "?="
+      "|="
+      "%="
+      ".="
+      "//"
+    ]
+  "atom-material-ui":
+    fonts: {}
+    tabs: {}
+    treeView:
+      compactList: true
+    ui: {}
+  "autoclose-html":
+    forceInline: [
+      "title"
+      "h1"
+      "h2"
+      "h3"
+      "h4"
+      "h5"
+      "h6"
+      "p"
+      "li"
+    ]
+    makeNeverCloseSelfClosing: false
+  core:
+    disabledPackages: [
+      "archive-view"
+      "autosave"
+      "bracket-matcher"
+      "feedback"
+      "test-status"
+      "whitespace"
+    ]
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+      ".vagrant"
+      ".sass-cache"
+    ]
+    projectHome: "/Users/felix/code"
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+    fontSize: 19
+    invisibles:
+      cr: "↩"
+      eol: " "
+    lineHeight: 1.8
+    showIndentGuide: true
+    showInvisibles: true
+    softWrapAtPreferredLineLength: true
+  "exception-reporting":
+    userId: "ac87803e-55eb-c8aa-62b0-44ab537d7fea"
+  feedback:
+    email: "felix@felixkiss.com"
+  "grammar-config":
+    PHP:
+      editor:
+        tabLength: 4
+  linter: {}
+  metrics:
+    userId: "7a4e048aa0bd763d5479ed6f8ab642714780a0d3"
+  "release-notes":
+    viewedVersion: "0.95.0"
+  "spell-check":
+    grammars: [
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+    ]
+  "test-status":
+    "gulpfile.js": "gulp test"
+    "phpspec.atom.yml": "phpspec run --config phpspec.atom.yml"
+    "phpspec.yml": "phpspec run"
+    "phpunit.atom.xml": "phpunit --configuration phpunit.atom.xml"
+    "phpunit.xml": "phpunit"
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".blade.html.php.text":
+  editor:
+    commentEnd: " --}}"
+    commentStart: "{{-- "
+"linter-jshint":
+  disableWhenNoJshintrcFileInPath: true
+  executablePath: "/usr/local/bin/jshint"
+  lintInlineJavaScript: false

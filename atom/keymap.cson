@@ -1,9 +1,10 @@
-# I am on a MacBook Pro with German keyboard layout
-# and have trouble assigning some keybindings
-#
 'body':
+  # A new hope/line
   'cmd-"': 'pane:show-next-item'
-  # 'cmd-shift-2': 'pane:show-next-item'
-
   'cmd-!': 'pane:show-previous-item'
-  # 'cmd-shift-1': 'pane:show-previous-item'
+  'cmd-C': 'color-picker:open'
+  'cmd-+': 'color-picker:open'
+  'cmd-\'': 'toggle-quotes:toggle'
+
+'.platform-darwin atom-workspace':
+  'cmd-"': 'pane:show-next-item'

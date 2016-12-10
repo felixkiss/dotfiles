@@ -13,4 +13,4 @@
 #   if path.extname(editor.getPath()) is '.md'
 #     editor.setSoftWrap(true)
 #
-atom.workspaceView.trigger('status-tab-spacing:toggle')
+# atom.workspaceView.trigger('status-tab-spacing:toggle')

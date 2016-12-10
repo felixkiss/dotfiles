@@ -1,36 +1,49 @@
-.editor {
+atom-text-editor {
   // Let the code breath!
-  .line, .cursor, .line-number {
-    padding: 7px 0;
+  .line, .cursor, .line-number, .underlayer .placeholder-text {
+    // padding: 7px 0;
+  }
+
+  .underlayer .placeholder-text {
+      // display: block;
+      // padding: 7px 0;
   }
 
   // Show invisible characters upon selection
   .line .invisible-character {
-    color: rgba(40, 40, 40, 1);
+    // color: rgba(40, 40, 40, 1);
   }
 
   // Cursor isn't blinking anymore
   &.is-focused .cursor.blink-off {
-    visibility: visible;
+    // visibility: visible;
   }
 
   // Git Diff
   .gutter {
     .line-number {
-      &.git-line-added, &.git-line-removed, &.git-line-modified {
-        border-left-width: 3px;
+      &.git-line-added, &.git-line-modified {
+        // border-left-width: 3px;
+        // padding-left: calc(0.5em - 3px);
       }
 
       &.git-line-added {
-        border-left-color: #98e03a;
+        // border-left-color: #98e03a;
+      }
+
+      &.git-line-removed {
+          // border-left: none;
+          // padding-left: 0.5em;
+          // border-bottom: 3px solid #ff0000;
+          // padding-bottom: 4px;
       }
     }
   }
 }
 
 // Border between split panes
-.panes {
+atom-pane-container {
     .pane-row > * {
-        border-right: 2px solid rgba(72, 72, 72, 0.5);
+        // border-right: 2px solid rgba(72, 72, 72, 0.5);
     }
 }

@@ -1,4 +1,8 @@
+atom/.apm/
 atom/.node-gyp/
+atom/blob-store/
+atom/compile-cache/
 atom/storage/
 atom/dev/
 atom/packages/
+atom/test-status.cson
