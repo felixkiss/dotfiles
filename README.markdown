@@ -14,3 +14,10 @@ rake install
 cd ~/dotfiles
 rake remove
 ```
+
+### Atom
+
+```
+cd ~/dotfiles/atom
+rake install
+```
