@@ -2,8 +2,11 @@ atom
 bin
 phpspec
 vagrant-provisioning
+vim
 zsh
 editorconfig
 gitconfig
 gitignore_global
+gemrc
+vimrc
 zshrc
