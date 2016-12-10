@@ -4,13 +4,8 @@ use PhpSpec\ObjectBehavior;
 
 class %name% extends ObjectBehavior
 {
-    function let()
+    function it_is_initializable()
     {
-
-    }
-
-    function letgo()
-    {
-
+        $this->shouldHaveType('%subject%');
     }
 }
