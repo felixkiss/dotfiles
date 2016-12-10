@@ -6,7 +6,7 @@
 [color]
   ui = true
 [core]
-  editor = atom --wait
+  editor = text --wait
   excludesfile = ~/.gitignore_global
 [alias]
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
@@ -26,8 +26,12 @@
 
   # list aliases
   la = "!git config -l | grep alias | cut -c 7-"
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  path = /usr/local/bin
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path =
@@ -45,3 +49,7 @@
   tool = Kaleidoscope
 [mergetool]
   prompt = false
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
