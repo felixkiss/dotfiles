@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-[[ -f $PWD/Vagrantfile ]] || (cp ~/.vagrant-provisioning/templates/Vagrantfile $PWD/ && echo "Vagrantfile copied ...")
-[[ -f $PWD/vagrant.sh ]] || (cp ~/.vagrant-provisioning/templates/vagrant.sh $PWD/ && echo "vagrant.sh copied ...")
