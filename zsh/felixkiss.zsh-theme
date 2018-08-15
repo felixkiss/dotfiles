@@ -80,7 +80,7 @@ get_space () {
   local zero='%([BSUbfksu]|([FB]|){*})'
   local LENGTH=${#${(S%%)STR//$~zero/}}
   local SPACES=""
-  (( LENGTH = ${COLUMNS} - $LENGTH - 3))
+  (( LENGTH = ${COLUMNS} - $LENGTH - 4))
 
   for i in {0..$LENGTH}
     do
