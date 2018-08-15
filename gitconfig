@@ -23,6 +23,7 @@
   m = merge
   ca = commit --amend
   actually = "!git add --all && git commit --amend --no-edit"
+  list-branches = branch --sort=committerdate
 
   # list aliases
   la = "!git config -l | grep alias | cut -c 7-"
