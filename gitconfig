@@ -15,7 +15,7 @@
   delete-merged-branches = "!git show-merged-branches | xargs -n 1 git branch -d"
   force-delete-merged-branches = "!git show-merged-branches | xargs -n 1 git branch -D"
   cleanup = remote prune origin
-  wip = "!git add --all && git commit -m \"[wip]\""
+  wip = "!git add --all && git commit -m \"[wip] [skip ci]\""
   wipco = "!git wip && git checkout"
   co = checkout
   f = fetch
