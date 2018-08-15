@@ -23,7 +23,10 @@
       ".="
       "//"
     ]
+  "atom-ide-ui":
+    use: {}
   "atom-material-ui":
+    colors: {}
     fonts: {}
     tabs: {}
     treeView:
@@ -50,6 +53,11 @@
       "feedback"
       "test-status"
       "whitespace"
+      "linter-rubocop"
+      "php-integrator-autocomplete-plus"
+      "php-integrator-base"
+      "linter"
+      "ide-php"
     ]
     ignoredNames: [
       ".git"
@@ -82,9 +90,29 @@
     PHP:
       editor:
         tabLength: 4
+  "ide-php":
+    phpPath: "/usr/local/bin/php"
   linter: {}
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+  "linter-ui-default":
+    panelHeight: 158
   metrics:
     userId: "7a4e048aa0bd763d5479ed6f8ab642714780a0d3"
+  "php-cs-fixer": {}
+  "php-ide-serenata":
+    linting:
+      showMissingDocs: false
+      showUnknownGlobalFunctions: false
+  "php-integrator-autocomplete-plus":
+    enablePhpunitAnnotationTags: false
+  "php-integrator-base":
+    linting:
+      showMissingDocs: false
+      showUnknownClasses: false
+      showUnknownGlobalConstants: false
+      showUnknownGlobalFunctions: false
+      validateDocblockCorrectness: false
   "release-notes":
     viewedVersion: "0.95.0"
   "spell-check":
@@ -109,6 +137,10 @@
   editor:
     commentEnd: " --}}"
     commentStart: "{{-- "
+".gfm.source":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: false
 "linter-jshint":
   disableWhenNoJshintrcFileInPath: true
   executablePath: "/usr/local/bin/jshint"
