@@ -32,5 +32,19 @@ export PATH=$PATH:$GOPATH/bin
 # Add rails binaries to PATH
 export PATH=./bin:$PATH
 
+# Add mysql binaries to PATH
+[[ -d /usr/local/opt/mysql@5.7 ]] && export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
 # added by travis gem
 [ -f /Users/felix/.travis/travis.sh ] && source /Users/felix/.travis/travis.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# [[ -d ~/.rvm ]] && export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Use Google Chrome for Launchy
+export LAUNCHY_APPLICATION="open -a Google\ Chrome"
