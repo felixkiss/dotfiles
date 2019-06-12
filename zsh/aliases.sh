@@ -1,9 +1,13 @@
+# Zsh aliases
+alias reload='source ~/.zshrc'
+
 # Git aliases
 alias gs='git status'
 alias gl='git log'
 alias gst='git stash'
 alias gstp='git stash pop'
 alias gmo='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
+alias gpo='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 
 # Laravel aliases
 alias art='php artisan'

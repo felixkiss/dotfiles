@@ -11,3 +11,8 @@ ssh-add ~/.ssh/id_rsa
 # Add aliases to toggle desktop files
 alias desktop-hide-files='defaults write com.apple.finder CreateDesktop false; killall Finder'
 alias desktop-show-files='defaults write com.apple.finder CreateDesktop true; killall Finder'
+
+# Add aliases for brew services
+alias brew-start='brew services start'
+alias brew-stop='brew services stop'
+alias brew-services='brew services list'

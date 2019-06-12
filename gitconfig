@@ -15,7 +15,7 @@
   delete-merged-branches = "!git show-merged-branches | xargs -n 1 git branch -d"
   force-delete-merged-branches = "!git show-merged-branches | xargs -n 1 git branch -D"
   cleanup = remote prune origin
-  wip = "!git add --all && git commit -m \"[wip] [skip ci]\""
+  wip = "!git add --all && git reset TODO.markdown && git commit -m \"[wip] [skip ci]\""
   wipco = "!git wip && git checkout"
   co = checkout
   f = fetch
@@ -24,6 +24,7 @@
   ca = commit --amend
   actually = "!git add --all && git commit --amend --no-edit"
   list-branches = branch --sort=committerdate
+  undo = reset --soft HEAD~
 
   # list aliases
   la = "!git config -l | grep alias | cut -c 7-"
