@@ -41,3 +41,14 @@
       # frozen_string_literal: true
 
     """
+
+'.source.js':
+  'jest it':
+    'prefix': 'it'
+    'body': """
+      it('$1', () => {$2
+      });
+    """
+  '() => {}':
+    'prefix': '=>'
+    'body': '($1) => {$2}'

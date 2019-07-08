@@ -1,6 +1,9 @@
 # Set LANG
 export LANG="en_US.UTF-8"
 
+# Tell bundler I prefer Git over SSH
+export BUNDLER_USE_SSH=true
+
 # Use oh-my-zsh if installed
 [[ -d ~/.oh-my-zsh ]] && source ~/.zsh/oh-my-zsh.sh
 
@@ -36,7 +39,7 @@ export PATH=./bin:$PATH
 [[ -d /usr/local/opt/mysql@5.7 ]] && export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # added by travis gem
-[ -f /Users/felix/.travis/travis.sh ] && source /Users/felix/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # [[ -d ~/.rvm ]] && export PATH="$PATH:$HOME/.rvm/bin"
@@ -45,6 +48,3 @@ export PATH=./bin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Use Google Chrome for Launchy
-export LAUNCHY_APPLICATION="open -a Google\ Chrome"

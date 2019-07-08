@@ -23,3 +23,15 @@ alias be='bundle exec'
 
 # Rails aliases
 alias rr='be rails'
+
+# Jest aliases
+alias jest-inspect='node --inspect-brk node_modules/.bin/jest --runInBand --watch'
+
+# Meister aliases
+alias tunnel-staging-shared-redis='gcloud beta compute start-iap-tunnel --project meister-accounts-staging accounts-staging-redis-shared 6379'
+
+# Docker aliases
+function docker-build-and-bash {
+	docker build $* --tag foo .
+	docker run -it foo bash
+}

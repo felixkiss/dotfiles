@@ -16,3 +16,15 @@ alias desktop-show-files='defaults write com.apple.finder CreateDesktop true; ki
 alias brew-start='brew services start'
 alias brew-stop='brew services stop'
 alias brew-services='brew services list'
+
+# Use Google Chrome for Launchy
+export LAUNCHY_APPLICATION="open -a Google\ Chrome"
+
+# Fix ruby crashes on macOS Mojave
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/dotfiles/bin/osx/google-cloud-sdk/path.zsh.inc' ]; then . '~/dotfiles/bin/osx/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '~/dotfiles/bin/osx/google-cloud-sdk/completion.zsh.inc' ]; then . '~/dotfiles/bin/osx/google-cloud-sdk/completion.zsh.inc'; fi
