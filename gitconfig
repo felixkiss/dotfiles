@@ -8,9 +8,10 @@
 [core]
   editor = text --wait
   excludesfile = ~/.gitignore_global
+  pager = less -F -X # avoid pager when content is less than terminal height
 [alias]
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lola = lol --all
   show-merged-branches = "!git branch --merged master | grep -v master | grep -v \\*"
   delete-merged-branches = "!git show-merged-branches | xargs -n 1 git branch -d"
   force-delete-merged-branches = "!git show-merged-branches | xargs -n 1 git branch -D"
@@ -18,8 +19,10 @@
   undo = reset --soft HEAD~
   unstage = reset
   stage-all = "!git add --all"
+  patch = format-patch HEAD^ --stdout
   wip = "!git stage-all && git commit -m \"[wip] [skip ci]\""
   wipco = "!git wip && git checkout"
+  wip-patch = "!git wip && git patch"
   co = checkout
   f = fetch
   p = pull
