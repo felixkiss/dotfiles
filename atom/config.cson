@@ -32,6 +32,8 @@
     treeView:
       compactList: true
     ui: {}
+  "atom-package-deps":
+    ignored: []
   "autoclose-html":
     forceInline: [
       "title"
@@ -46,6 +48,7 @@
     ]
     makeNeverCloseSelfClosing: false
   core:
+    automaticallyUpdate: false
     disabledPackages: [
       "archive-view"
       "autosave"
@@ -53,11 +56,10 @@
       "feedback"
       "test-status"
       "whitespace"
-      "linter-rubocop"
       "php-integrator-autocomplete-plus"
       "php-integrator-base"
-      "linter"
       "ide-php"
+      "spell-check"
     ]
     ignoredNames: [
       ".git"
@@ -72,6 +74,7 @@
       "atom-material-ui"
       "atom-material-syntax"
     ]
+    useTreeSitterParsers: false
   editor:
     fontFamily: "Source Code Pro"
     fontSize: 19
@@ -92,11 +95,23 @@
         tabLength: 4
   "ide-php":
     phpPath: "/usr/local/bin/php"
+  "language-dotenv":
+    dotenvFileNames: [
+      ".env"
+      ".env.example"
+      ".env.template"
+      ".env.development"
+      ".env.development.local"
+    ]
   linter: {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
   "linter-ui-default":
     panelHeight: 158
+  "markdown-preview":
+    breakOnSingleNewline: true
   metrics:
     userId: "7a4e048aa0bd763d5479ed6f8ab642714780a0d3"
   "php-cs-fixer": {}
