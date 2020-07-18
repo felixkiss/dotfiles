@@ -7,6 +7,9 @@ export BUNDLER_USE_SSH=true
 # Use oh-my-zsh if installed
 [[ -d ~/.oh-my-zsh ]] && source ~/.zsh/oh-my-zsh.sh
 
+# Install broot shell function. See https://dystoy.org/broot/install
+source /Users/felix/.config/broot/launcher/bash/br
+
 # Load aliases
 source ~/.zsh/aliases.sh
 
@@ -45,6 +48,17 @@ export PATH=./bin:$PATH
 # [[ -d ~/.rvm ]] && export PATH="$PATH:$HOME/.rvm/bin"
 
 # Add NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [[ -d "$HOME/.nvm" ]]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
+# Add Cargo to PATH
+if [[ -d "$HOME/.cargo" ]]; then
+  export PATH=$HOME/.cargo/bin:$PATH
+fi
+
+# Google Cloud SDK
+if [ -f '/Users/felix/code/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/felix/code/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/felix/code/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/felix/code/google-cloud-sdk/completion.zsh.inc'; fi

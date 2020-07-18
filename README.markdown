@@ -7,12 +7,7 @@ My dotfiles standard repository.
 ```
 git clone git@github.com:felixkiss/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-rake install
-```
-
-```
-cd ~/dotfiles
-rake remove
+./install
 ```
 
 ### Atom

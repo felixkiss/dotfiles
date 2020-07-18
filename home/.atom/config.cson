@@ -32,8 +32,6 @@
     treeView:
       compactList: true
     ui: {}
-  "atom-package-deps":
-    ignored: []
   "autoclose-html":
     forceInline: [
       "title"
@@ -46,9 +44,7 @@
       "p"
       "li"
     ]
-    makeNeverCloseSelfClosing: false
   core:
-    automaticallyUpdate: false
     disabledPackages: [
       "archive-view"
       "autosave"
@@ -59,7 +55,13 @@
       "php-integrator-autocomplete-plus"
       "php-integrator-base"
       "ide-php"
-      "spell-check"
+      "php-ide-serenata"
+      "project-manager"
+      "atom-ide-ui"
+      "linter-php"
+      "formatter-json"
+      "formatter"
+      "atom-formatter-jsbeautify"
     ]
     ignoredNames: [
       ".git"
@@ -74,7 +76,6 @@
       "atom-material-ui"
       "atom-material-syntax"
     ]
-    useTreeSitterParsers: false
   editor:
     fontFamily: "Source Code Pro"
     fontSize: 19
@@ -84,34 +85,28 @@
     lineHeight: 1.8
     showIndentGuide: true
     showInvisibles: true
-    softWrapAtPreferredLineLength: true
+    softWrap: true
   "exception-reporting":
     userId: "ac87803e-55eb-c8aa-62b0-44ab537d7fea"
   feedback:
     email: "felix@felixkiss.com"
+  "formatter-jsbeautify":
+    a:
+      executablePath: "/Users/felix/.nvm/versions/node/v10.16.3/bin/js-beautify"
+      nodePath: "/Users/felix/.nvm/versions/node/v10.16.3/bin/node"
   "grammar-config":
     PHP:
       editor:
         tabLength: 4
   "ide-php":
     phpPath: "/usr/local/bin/php"
-  "language-dotenv":
-    dotenvFileNames: [
-      ".env"
-      ".env.example"
-      ".env.template"
-      ".env.development"
-      ".env.development.local"
-    ]
   linter: {}
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
   "linter-rubocop":
     disableWhenNoConfigFile: true
   "linter-ui-default":
-    panelHeight: 158
-  "markdown-preview":
-    breakOnSingleNewline: true
+    showPanel: true
   metrics:
     userId: "7a4e048aa0bd763d5479ed6f8ab642714780a0d3"
   "php-cs-fixer": {}
@@ -119,6 +114,7 @@
     linting:
       showMissingDocs: false
       showUnknownGlobalFunctions: false
+    storagePath: "/Users/felix/Library/Preferences/php-ide-serenata"
   "php-integrator-autocomplete-plus":
     enablePhpunitAnnotationTags: false
   "php-integrator-base":
@@ -144,6 +140,7 @@
     "phpunit.xml": "phpunit"
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:

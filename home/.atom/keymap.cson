@@ -8,9 +8,15 @@
 '.platform-darwin atom-workspace':
   'cmd-"': 'pane:show-next-item'
   'cmd-\'': 'toggle-quotes:toggle'
+  'cmd-shift-#': 'toggle-quotes:toggle'
 
 'atom-workspace atom-text-editor:not([mini])':
   'alt-cmd-left': 'editor:fold-current-row'
   'alt-cmd-right': 'editor:unfold-current-row'
   'ctrl-alt-cmd-left': 'editor:fold-all'
   'ctrl-alt-cmd-right': 'editor:unfold-all'
+  'cmd-e': 'emmet:expand-abbreviation'
+  'cmd-e': 'emmet:expand-abbreviation'
+
+'.platform-darwin atom-text-editor:not([mini])':
+  'cmd-\'': 'toggle-quotes:toggle'

@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+FORCE_LINK=0
+INITIAL_WORKING_DIRECTORY=$(pwd)
+
+while getopts 'f' c
+do
+  case $c in
+    f) FORCE_LINK=1 ;;
+  esac
+done
+
+cd "$(dirname "$0")"
+
+# Link home dir stuff
+case $FORCE_LINK in
+  0) ln -vsi $PWD/home/.* "$HOME" ;;
+  1) ln -vsf $PWD/home/.* "$HOME" ;;
+esac
+
+cd $INITIAL_WORKING_DIRECTORY
