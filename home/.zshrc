@@ -8,7 +8,7 @@ export BUNDLER_USE_SSH=true
 [[ -d ~/.oh-my-zsh ]] && source ~/.zsh/oh-my-zsh.sh
 
 # Install broot shell function. See https://dystoy.org/broot/install
-source /Users/felix/.config/broot/launcher/bash/br
+[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
 
 # Load aliases
 source ~/.zsh/aliases.sh
@@ -38,8 +38,6 @@ export PATH=$PATH:$GOPATH/bin
 # Add rails binaries to PATH
 export PATH=./bin:$PATH
 
-# Add mysql binaries to PATH
-[[ -d /usr/local/opt/mysql@5.7 ]] && export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
@@ -60,5 +58,5 @@ if [[ -d "$HOME/.cargo" ]]; then
 fi
 
 # Google Cloud SDK
-if [ -f '/Users/felix/code/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/felix/code/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/felix/code/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/felix/code/google-cloud-sdk/completion.zsh.inc'; fi
+[ -f "$HOME/code/google-cloud-sdk/path.zsh.inc" ] && source "$HOME/code/google-cloud-sdk/path.zsh.inc"
+[ -f "$HOME/code/google-cloud-sdk/completion.zsh.inc" ] && source "$HOME/code/google-cloud-sdk/completion.zsh.inc"
