@@ -40,6 +40,14 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(tmux git brew composer)
+plugins=(zsh-navigation-tools rsync git bgnotify)
 
 source $ZSH/oh-my-zsh.sh
+
+# Configure oh-my-zsh timer plugin
+TIMER_THRESHOLD=10 # Show when command took longer than 10 seconds
+TIMER_PRECISION=0 # Only show full seconds
+TIMER_FORMAT="$(fk_colored cyan '[%d]')"
+
+# Register custom adaption of timer plugin
+source $HOME/.zsh/plugins/last-command.plugin.zsh
