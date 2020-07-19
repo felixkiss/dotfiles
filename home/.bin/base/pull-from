@@ -1,0 +1,10 @@
+#!/bin/zsh
+#
+# Overwrite this directory with version from server
+#
+
+echo "rsync -avzh --protect-args --delete \"$1:$PWD\" \"$(dirname $PWD)/\""
+
+are-you-sure || exit
+
+rsync -avzh --protect-args --delete "$1:$PWD" "$(dirname $PWD)/"

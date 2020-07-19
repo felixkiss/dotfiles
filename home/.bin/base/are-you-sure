@@ -1,0 +1,13 @@
+#!/bin/zsh
+#
+# Asks if user is sure, otherwise exits
+#
+
+echo -n "$1"
+read -q "REPLY?Are you sure? (y/n) "
+echo ""
+
+if [[ "$REPLY" != "y" ]]; then
+  echo "Abort"
+  exit 1
+fi
