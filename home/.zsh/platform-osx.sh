@@ -6,7 +6,7 @@ export EDITOR="text --wait"
 export HOMEBREW_NO_ANALYTICS=1
 
 # Register SSH key to agent
-ssh-add ~/.ssh/id_rsa
+# ssh-add ~/.ssh/id_rsa
 
 # Add aliases to toggle desktop files
 alias desktop-hide-files='defaults write com.apple.finder CreateDesktop false; killall Finder'
@@ -25,3 +25,7 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Add mysql binaries to PATH
 [[ -d /usr/local/opt/mysql@5.7 ]] && export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# Add homebrew ruby to PATH
+[[ -d /usr/local/opt/ruby/bin ]] && export PATH="/usr/local/opt/ruby/bin:$PATH"
+[[ -d /usr/local/lib/ruby/gems/2.7.0/bin ]] && export PATH="/usr/local/lib/ruby/gems/2.7.0/bin:$PATH"

@@ -10,10 +10,13 @@ alias gmo='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
 alias gpo='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
 
 # Laravel aliases
+alias composer='COMPOSER_MEMORY_LIMIT=-1 composer'
 alias art='php artisan'
 alias vm='ssh vagrant@127.0.0.1 -p 2222'
 alias deploy='dep deploy'
+alias rollback='dep rollback'
 alias mix='yarn watch'
+alias ppp='phpstan && php-cs-fixer fix --dry-run --diff -v && pest'
 
 # Vagrant aliases
 alias vs='vagrant status'
@@ -40,4 +43,4 @@ function docker-build-and-bash {
 }
 
 # Dokku
-[ -f ~/code/dokku/contrib/dokku_client.sh ] && alias dokku='~/code/dokku/contrib/dokku_client.sh'
+[[ -f ~/code/dokku/contrib/dokku_client.sh ]] && alias dokku='~/code/dokku/contrib/dokku_client.sh'
