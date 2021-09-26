@@ -1,6 +1,10 @@
 # Zsh aliases
 alias reload='source ~/.zshrc'
-alias dotfiles-update='cd ~/dotfiles && git pull && reload'
+
+dotfiles-update () {
+  local current="$CWD"
+  cd ~/dotfiles && git pull && reload && cd "$current"
+}
 
 # SSH aliases
 ssh-fingerprint () {
