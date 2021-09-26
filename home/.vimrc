@@ -2,6 +2,9 @@
 set list
 set listchars=tab:▸\ ,eol:¬
 
+" Show line numbers
+set number
+
 " Turn syntax highlighting on
 syntax on
 
