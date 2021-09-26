@@ -3,8 +3,8 @@
 # For example, some comfort things we only want enable for
 # normal users and never for root
 
-if [[ "$USER" -eq "root" ]]; then
+if [[ "$USER" == "root" ]]; then
   source ~/.zsh/user-root.sh
-elif; then
+else
   source ~/.zsh/user-normal.sh
 fi

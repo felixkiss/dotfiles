@@ -7,9 +7,6 @@ export BUNDLER_USE_SSH=true
 # Use oh-my-zsh if installed
 [[ -d ~/.oh-my-zsh ]] && source ~/.zsh/oh-my-zsh.sh
 
-# Install broot shell function. See https://dystroy.org/broot/install
-[[ -f ~/.config/broot/launcher/bash/br ]] && source ~/.config/broot/launcher/bash/br
-
 # Load aliases
 source ~/.zsh/aliases.sh
 
