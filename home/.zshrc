@@ -21,3 +21,6 @@ source ~/.zsh/platform.sh
 
 # Load user specific settings
 source ~/.zsh/user.sh
+
+# Load host specific settings
+source ~/.zsh/host.sh
