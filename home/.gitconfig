@@ -12,7 +12,7 @@
 [alias]
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = lol --all
-  show-merged-branches = "!git branch --merged master | grep -v master | grep -v \\*"
+  show-merged-branches = "!git branch --merged main | grep -v main | grep -v \\*"
   delete-merged-branches = "!git show-merged-branches | xargs -n 1 git branch -d"
   force-delete-merged-branches = "!git show-merged-branches | xargs -n 1 git branch -D"
   cleanup = remote prune origin
@@ -31,6 +31,7 @@
   append = commit --amend --no-edit
   actually = "!git stage-all && git append"
   list-branches = branch --sort=committerdate
+  fix-dangling-head = remote set-head origin main
 
   # list aliases
   la = "!git config -l | grep alias | cut -c 7-"
