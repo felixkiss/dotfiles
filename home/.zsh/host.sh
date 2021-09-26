@@ -8,7 +8,7 @@ deployer_servers=(
   NGEzYzdiOGFhNTA2MDk0M2NjNDNlYjgzOWJjOWVkZjJiM2RiYjk5Nwo=
   NDkxOGZjZjBmYzg4YzkzY2IwOTg5NjRiMWE0NTgyYWNkNDJhN2E5MQo=
 )
-current = hashed-hostname
+current=`hashed-hostname`
 
 if (($deployer_servers[(Ie)$current])); then
   source ~/.zsh/host-deployer.sh
