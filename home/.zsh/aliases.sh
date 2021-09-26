@@ -1,5 +1,6 @@
 # Zsh aliases
 alias reload='source ~/.zshrc'
+alias dotfiles-update='cd ~/dotfiles && git pull && reload'
 
 # SSH aliases
 ssh-fingerprint () {
