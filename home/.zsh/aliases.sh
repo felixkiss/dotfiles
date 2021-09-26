@@ -1,6 +1,21 @@
 # Zsh aliases
 alias reload='source ~/.zshrc'
 
+# SSH aliases
+ssh-fingerprint () {
+  if [ "$#" -eq 0 ]
+  then
+    echo "Usage: ssh-fingerprint example.org"
+  else
+    ssh $@ bash <<'EOF'
+      for file in /etc/ssh/ssh_host_*.pub
+      do
+        ssh-keygen -l -f $file
+      done
+EOF
+  fi
+}
+
 # Git aliases
 alias gs='git status'
 alias gl='git log'
@@ -8,6 +23,24 @@ alias gst='git stash'
 alias gstp='git stash pop'
 alias gmo='git merge origin/$(git rev-parse --abbrev-ref HEAD)'
 alias gpo='git push -u origin $(git rev-parse --abbrev-ref HEAD)'
+
+# Util
+alias tree='tree -FL 2 --dirsfirst'
+
+# Ansible aliases
+alias ap='ansible-playbook'
+alias pb='ansible-playbook'
+alias av='ansible-vault'
+
+ara () {
+  echo "ansible all -m shell -a $@"
+  ansible all -m shell -a $@
+}
+
+arag () {
+  echo "ansible all -m shell -a \"hostname; $1; echo '\\\\n---'\" ${@: 2}"
+  ansible all -m shell -a "hostname; $1; echo '\\n---'" ${@: 2}
+}
 
 # Laravel aliases
 alias composer='COMPOSER_MEMORY_LIMIT=-1 composer'
