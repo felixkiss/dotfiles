@@ -1,13 +1,13 @@
 # Zsh aliases
 alias reload='source ~/.zshrc'
 
-dotfiles-update () {
+function dotfiles-update {
   local current="$CWD"
   cd ~/dotfiles && git pull && reload && cd "$current"
 }
 
 # SSH aliases
-ssh-fingerprint () {
+function ssh-fingerprint {
   if [ "$#" -eq 0 ]
   then
     echo "Usage: ssh-fingerprint example.org"
@@ -37,12 +37,12 @@ alias ap='ansible-playbook'
 alias pb='ansible-playbook'
 alias av='ansible-vault'
 
-ara () {
+function ara {
   echo "ansible all -m shell -a $@"
   ansible all -m shell -a $@
 }
 
-arag () {
+function arag {
   echo "ansible all -m shell -a \"hostname; $1; echo '\\\\n---'\" ${@: 2}"
   ansible all -m shell -a "hostname; $1; echo '\\n---'" ${@: 2}
 }
